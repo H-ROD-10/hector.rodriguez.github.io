@@ -65,6 +65,12 @@ nav {
   border-radius: 5px;
 }
 
+.main_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .name {
   width: 500px;
   position: absolute;
@@ -121,6 +127,10 @@ nav {
   color: #17d1ac;
   transition: all ease 0.5s;
 }
+.hero {
+  width: 500px;
+}
+
 .arrow {
   align-self: end;
   width: 50%;
