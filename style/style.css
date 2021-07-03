@@ -127,8 +127,9 @@ nav {
   color: #17d1ac;
   transition: all ease 0.5s;
 }
-.hero {
+.hero img {
   width: 500px;
+  object-fit: cover;
 }
 
 .arrow {
