@@ -9,10 +9,22 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap"
       rel="stylesheet"
     />
+    <!--FONTAWESOME-->
     <script
       src="https://kit.fontawesome.com/fba497cf5c.js"
       crossorigin="anonymous"
     ></script>
+
+    <!--EMAILJS-->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_UylErDyl8K9uO8SqlidSw");
+      })();
+    </script>
     <title>Portafolio</title>
   </head>
 
@@ -52,7 +64,12 @@
               de proyectos en React, Node, MongoDb, y entornos JavaScript
             </p>
             <!--cv-btn-->
-            <a href="#portafolio" class="cv-btn">Portafolio</a>
+            <a
+              href="image/pdf/modelo-de-negocio.pdf"
+              download="modelo-de-negocio.pdf"
+              class="cv-btn"
+              >Ver Curriculum</a
+            >
           </div>
           <!--Social-->
           <div class="social">
@@ -81,7 +98,7 @@
           de la interfaz de usuario hasta toda la logica empresarial.
         </p>
         <!--btn-->
-        <button>Más Detalles</button>
+        <a href="#portafolio" class="button">Portafolio</a>
       </div>
       <!--About-model-img-->
       <div class="about-model">
@@ -114,7 +131,7 @@
           </div>
           <!--services-box-text---->
           <div class="s-b-text">
-            <a href="#">
+            <a href="#contact-form">
               Inicia tu empredimiento ya. te ofrecemos paginas web, listas para
               usar, auto-administrables y altamente personalizables.
             </a>
@@ -131,7 +148,7 @@
           </div>
           <!--services-box-text---->
           <div class="s-b-text">
-            <a href="#">
+            <a href="#contact-form">
               Desarrollos template, paginas Web y App a medida, tu sueñalo y
               nosotros lo construímos desde el boceto hasta el posicionamiento
               en los principales buscadores web y redes sociales.
@@ -149,7 +166,7 @@
           </div>
           <!--services-box-text---->
           <div class="s-b-text">
-            <a href="#">
+            <a href="#contact-form">
               Damos forma a tu logica empresarial, mediante la implementación
               robusta de servicios rest-api y graphql de alta concurrencia, y
               velocidad optima.
@@ -168,28 +185,46 @@
         <div class="p-box">
           <!--text-------->
           <div class="text-overlay">
-            <h3>Idea</h3>
-            <p>Client Project</p>
+            <h3>Ecommerce Electronic</h3>
+            <p>
+              Construído con React, Node, Express, MongoDb, entre otras
+              dependecias
+            </p>
+            <a
+              href="https://ecomerce-electronic.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Ver Desmostración
+            </a>
           </div>
           <!---img-------->
-          <img src="image/portafolio/img4.jpg" alt="" />
+          <img src="image/portafolio/img4.jpg" alt="ecomerce-electronic" />
         </div>
         <!--Box-2--------------->
         <div class="p-box">
           <!--text-------->
           <div class="text-overlay">
-            <h3>Creatividad</h3>
-            <p>Client Project</p>
+            <h3>Backend VideoGame-Shop</h3>
+            <p>
+              Construído con Nodejs, TypeScript, Apollo-Server-Express, Graphql,
+              MongoDb
+            </p>
+            <a href="#contact-form"> Desmostración Bajo Pedido </a>
           </div>
           <!---img-------->
-          <img src="image/portafolio/img1.jpg" alt="" />
+          <img
+            src="image/portafolio/img1.jpg"
+            alt="Backend-Ecommerce-VideoGame"
+          />
         </div>
         <!--Box-3--------------->
         <div class="p-box">
           <!--text-------->
           <div class="text-overlay">
-            <h3>Desarrollo</h3>
-            <p>Client Project</p>
+            <h3>Landing-Bufete</h3>
+            <p>Construída con Nextjs, css, y Emailjs</p>
+            <a href="#" target="_blank" rel="noreferrer"> Ver Desmostración </a>
           </div>
           <!---img-------->
           <img src="image/portafolio/img6.jpg" alt="" />
@@ -235,7 +270,7 @@
     </section>
     <!--Contact-Form---------------------------->
     <section id="contact-form">
-      <form action="">
+      <form action="" id="form-contact">
         <!--Left------->
         <div class="contact-left">
           <!--heading------->
@@ -243,35 +278,60 @@
             <font style="border-bottom: 3px solid #1ed98b"> Escribenos </font>
           </h2>
           <!--Name-->
-          <label for="" class="f-name">
-            <font>Nombre</font>
-            <input type="text" name="" id="" placeholder="Nombre Completo" />
+
+          <label for="user" class="f-name">
+            <font>Nombre*</font>
+
+            <input
+              type="text"
+              name="user"
+              id="inputs"
+              placeholder="Nombre Completo"
+            />
           </label>
+          <p class="error" id="user">
+            El nombre debe contener solo lertras y un máximo de 50 carácteres
+          </p>
+
           <!--Email--------->
-          <label for="" class="f-email">
-            <font>Email</font>
-            <input type="email" name="" id="" placeholder="ejemplo@gmail.com" />
+          <label for="email" class="f-email">
+            <font>Email*</font>
+            <input
+              type="email"
+              name="email"
+              id="inputs"
+              placeholder="ejemplo@gmail.com"
+            />
           </label>
+          <p class="error" id="email">Debes agregar un email valido</p>
         </div>
         <!--Right------>
         <div class="contact-right">
           <!--message-->
-          <div class="message">
-            <font>Mensaje</font>
+          <div class="message" id="content">
+            <font>Mensaje*</font>
             <textarea
-              name="message"
-              id=""
+              name="content"
+              id="inputs"
               cols="20"
               rows="5"
               placeholder="Escribe tu mensaje"
             ></textarea>
+            <p class="error" id="message">
+              El mensaje no puede ser menor de 4 carácteres ni mayor de 160
+            </p>
           </div>
+          <p class="error" id="form_error">Debes rellenar todos los campos</p>
           <!--Submit----------->
-          <button>Enviar</button>
+          <button type="submit">Enviar</button>
+
+          <p class="error" id="form_success">
+            Tu mensaje ha sido enviado. Gracias
+          </p>
         </div>
       </form>
     </section>
-
-    <script src="js/app.js"></script>
+    <!--https://h-rod-10.github.io/hector.rodriguez.github.io/#portafolio-->
+    <script src="js/form.js"></script>
   </body>
 </html>
