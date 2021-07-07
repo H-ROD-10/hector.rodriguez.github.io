@@ -27,68 +27,81 @@
     </script>
     <title>Portafolio</title>
   </head>
-
   <body>
+    <!--HEADER-------------------------------->
     <header>
-      <!--NAVIGATION-------------------->
       <nav>
-        <!--LOGO------------------------>
+        <!--LOGO----------------->
 
-        <img src="image/portafolio/logo-hector.png" alt="logo" />
+        <img src="image/portafolio/logo-hector.png" alt="logo" class="logo" />
 
-        <!--MENU------------------------>
-        <ul class="menu">
+        <!--MENU DESKTOP--------------------->
+        <ul class="menu_desktop">
           <li><a href="#main" class="active">Home</a></li>
           <li><a href="#about">Nosotros</a></li>
           <li><a href="#services">Servicios</a></li>
           <li><a href="#portafolio">Portafolio</a></li>
           <li><a href="#contact-form">Contacto</a></li>
         </ul>
-        <!--LANGUAGE---------------------->
-        <a href="#" class="lang">Esp</a>
       </nav>
     </header>
-    <!--MAIN-------------------------->
     <section id="main">
       <div class="main_container">
-        <div>
-          <!--NAME---------------------------->
-          <div class="name">
-            <!--HELLO-->
-            <p>Hola</p>
-            <!--Title-->
-            <h1>Soy <font color="#17d1ac">Hector</font> Rodiguez</h1>
-            <!--Details-->
-            <p class="details">
-              Desarrollador FullStack especialista en la planeación y ejecución
-              de proyectos en React, Node, MongoDb, y entornos JavaScript
-            </p>
-            <!--cv-btn-->
-            <a
-              href="image/pdf/HectorJrodriguez.pdf"
-              download="modelo-de-negocio.pdf"
-              class="cv-btn"
-              >Ver Curriculum</a
-            >
-          </div>
-          <!--Social-->
+        <!--TITLE--------------------------->
+        <div class="title">
+          <p>Hola</p>
+          <h1>Soy <font color="#17d1ac">Hector</font> Rodiguez</h1>
+          <p class="details">
+            Desarrollador FullStack especialista en la planeación y ejecución de
+            proyectos en React, Node, MongoDb, y entornos JavaScript
+          </p>
+          <a
+            href="image/pdf/HectorJrodriguez.pdf"
+            download="HectorJrodriguez.pdf"
+            class="cv-btn"
+          >
+            Ver Curriculum
+          </a>
+          <!--REDES SOCIALES-------------->
           <div class="social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=617241269"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://twitter.com/HectorRB10"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/hectorjrb10/?hl=es-la"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://github.com/H-ROD-10?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fab fa-github"></i>
+            </a>
           </div>
         </div>
         <div class="hero">
           <img src="image/undraw_product_iteration_kjok.svg" alt="hero" />
         </div>
+        <div class="arrow"></div>
       </div>
-      <!--Arrow-->
-      <div class="arrow"></div>
     </section>
-    <!--ABOUT------------------------->
+    <!--ABOUT-------------------------------->
     <section id="about">
-      <!--Text--->
       <div class="about-text">
         <h2>Freelancing</h2>
         <h3>FullStack Developer</h3>
@@ -108,9 +121,7 @@
         />
       </div>
     </section>
-    <!--SERVICES---------------------->
     <section id="services">
-      <!--Services-Heading-->
       <div class="s-heading">
         <h2>Servicios</h2>
         <p>
@@ -118,7 +129,6 @@
           facil de utilizar
         </p>
       </div>
-      <!--Services-Box-Container-->
       <div class="s-b-container">
         <!--box-1----------------->
         <div class="s-box">
@@ -175,11 +185,8 @@
         </div>
       </div>
     </section>
-    <!--Portafolio---------------------->
     <section id="portafolio">
-      <!--heading-------->
       <h2 class="p-heading">Portafolio</h2>
-      <!--portafolio-box-container------>
       <div class="p-b-container">
         <!--Box-1--------------->
         <div class="p-box">
@@ -270,7 +277,7 @@
     </section>
     <!--Contact-Form---------------------------->
     <section id="contact-form">
-      <form action="" id="form-contact">
+      <form id="form-contact">
         <!--Left------->
         <div class="contact-left">
           <!--heading------->
@@ -331,6 +338,9 @@
         </div>
       </form>
     </section>
+    <footer>
+      <h4>©2021.Todos los derechos reservados</h4>
+    </footer>
     <!--https://h-rod-10.github.io/hector.rodriguez.github.io/#portafolio-->
     <script src="js/form.js"></script>
   </body>
